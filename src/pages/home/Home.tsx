@@ -5,6 +5,8 @@ import { fetchMovies } from "../../services/movies.service";
 import MovieCard, { MovieCardInterface } from "./MovieCard";
 import MoviesContext from "./MoviesContext";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import {useTranslation} from "react-i18next";
+import i18n from "i18next";
 
 const LOADING_ANIMATION_DELAY = 500;
 const MAX_MOVIES_ERROR_MESSAGE = 'You can only vote up to 3 movies!';
@@ -35,6 +37,7 @@ function Home() {
 	const [ready, setReady] = useState(false);
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState('');
+	const { t, i18n } = useTranslation();
 
 	const toggleMovieSelection = (movieID: string) => {
 		const outputSelectedMovies = [...selectedMovies];
@@ -76,7 +79,7 @@ function Home() {
 
 	return (
 		<Container fixed className={classes.root}>
-			<h2>Home</h2>
+			<h2>{t('Home')}</h2>
 			<Container fixed className={classes.cardsContainer}>
 				<MoviesContext.Provider value={{
 					selected: selectedMovies,

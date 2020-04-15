@@ -51,8 +51,8 @@ function Results(): any {
 	return (
 		context.movies && context.movies.length
 			? context.movies.map((movie: any) => (
-				<div className={classes.root}>
-					<Link to={'/detail/' + movie.imdbID} key={movie.imdbID}>
+				<div className={classes.root} key={movie.imdbID}>
+					<Link to={'/detail/' + movie.imdbID}>
 						<Card className={classes.resultCard}>
 							<CardContent className={classes.resultCardContent}>
 								<Typography variant="h5" component="h2">

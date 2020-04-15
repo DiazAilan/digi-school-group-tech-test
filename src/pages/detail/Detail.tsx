@@ -4,6 +4,7 @@ import { Container } from "@material-ui/core";
 import { fetchMovieDetail } from "../../services/movies.service";
 import { useParams } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -46,6 +47,7 @@ function Detail() {
 	const [ready, setReady] = useState(false);
 	const routeParams = useParams() as {movieId: string};
 	const movieId = routeParams.movieId;
+	const { t, i18n } = useTranslation();
 
 	useEffect(() => {
 		setReady(false);
@@ -99,6 +101,7 @@ interface DetailFieldsProps {
 }
 
 function DetailFields(props: DetailFieldsProps): any {
+	const { t, i18n } = useTranslation('detail');
 	const fields = [
 		'released', 'rated', 'runtime', 'genre', 'director',
 		'writer', 'actors', 'language', 'country', 'awards'
@@ -109,7 +112,7 @@ function DetailFields(props: DetailFieldsProps): any {
 		const targetField = props.movie[capitalizedField];
 		const shouldBeInserted = targetField && targetField !== 'N/A';
 		if (shouldBeInserted) {
-			elements.push(<li>{capitalizedField}: {targetField}</li>);
+			elements.push(<li>{t(capitalizedField)}: {targetField}</li>);
 		}
 	})
 	return elements;

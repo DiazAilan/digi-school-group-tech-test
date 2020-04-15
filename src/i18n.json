@@ -1,0 +1,17 @@
+{
+	"fr": {
+		"translation": {
+			"Home": "Accueil",
+			"Search": "Recherche",
+			"detail": {
+				"Released": "Sortie"
+			}
+		}
+	},
+	"es": {
+		"translation": {
+			"Home": "Inicio",
+			"Search": "Búsqueda"
+		}
+	}
+}
