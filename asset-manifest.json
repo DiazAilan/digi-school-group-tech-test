@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/digi-school-group-tech-test/static/css/main.789f69dd.chunk.css",
+    "main.js": "/digi-school-group-tech-test/static/js/main.2e8a42af.chunk.js",
+    "main.js.map": "/digi-school-group-tech-test/static/js/main.2e8a42af.chunk.js.map",
+    "runtime-main.js": "/digi-school-group-tech-test/static/js/runtime-main.d1ac188a.js",
+    "runtime-main.js.map": "/digi-school-group-tech-test/static/js/runtime-main.d1ac188a.js.map",
+    "static/js/2.ab5f331c.chunk.js": "/digi-school-group-tech-test/static/js/2.ab5f331c.chunk.js",
+    "static/js/2.ab5f331c.chunk.js.map": "/digi-school-group-tech-test/static/js/2.ab5f331c.chunk.js.map",
+    "index.html": "/digi-school-group-tech-test/index.html",
+    "precache-manifest.9b65a1a8e2e9c3168ec3e4027bf21eda.js": "/digi-school-group-tech-test/precache-manifest.9b65a1a8e2e9c3168ec3e4027bf21eda.js",
+    "service-worker.js": "/digi-school-group-tech-test/service-worker.js",
+    "static/css/main.789f69dd.chunk.css.map": "/digi-school-group-tech-test/static/css/main.789f69dd.chunk.css.map",
+    "static/js/2.ab5f331c.chunk.js.LICENSE.txt": "/digi-school-group-tech-test/static/js/2.ab5f331c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1ac188a.js",
+    "static/js/2.ab5f331c.chunk.js",
+    "static/css/main.789f69dd.chunk.css",
+    "static/js/main.2e8a42af.chunk.js"
+  ]
+}
