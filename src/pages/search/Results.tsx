@@ -1,11 +1,10 @@
-import React, {ReactComponentElement, useContext, useEffect, useState} from "react";
+import React, {useContext} from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { Container, Icon, TextField } from "@material-ui/core";
-import { fetchMovies } from "../../services/movies.service";
+import { Icon } from "@material-ui/core";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchContext from "./SearchContext";
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -47,6 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
 function Results(): any {
 	const classes = useStyles();
 	const context = useContext(SearchContext);
+	const { t } = useTranslation();
 
 	return (
 		context.movies && context.movies.length
@@ -63,7 +63,7 @@ function Results(): any {
 						</Card>
 					</Link>
 				</div>))
-			: <Typography>No results</Typography>
+			: <Typography>{t('search.noResults')}</Typography>
 	)
 }
 

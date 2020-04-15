@@ -47,7 +47,7 @@ function Detail() {
 	const [ready, setReady] = useState(false);
 	const routeParams = useParams() as {movieId: string};
 	const movieId = routeParams.movieId;
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		setReady(false);
@@ -83,7 +83,9 @@ function Detail() {
 									<DetailFields movie={movie}></DetailFields>
 									{movie.imdbRating && <li>IMDB Rating: {movie.imdbRating}</li>}
 								</ul>
-								{ movie.Plot !== 'N/A' && <p><b>Plot</b><br/>{movie.Plot}</p> }
+								{ movie.Plot !== 'N/A' &&
+									<p><b>{t("detail.Plot")}</b><br/>{movie.Plot}</p>
+								}
 							</Container>
 						</div>
 					</div>)
@@ -97,11 +99,13 @@ function Detail() {
 }
 
 interface DetailFieldsProps {
-	movie: any,
+	movie: {
+		[index: string]: string
+	};
 }
 
 function DetailFields(props: DetailFieldsProps): any {
-	const { t, i18n } = useTranslation('detail');
+	const { t } = useTranslation();
 	const fields = [
 		'released', 'rated', 'runtime', 'genre', 'director',
 		'writer', 'actors', 'language', 'country', 'awards'
@@ -112,7 +116,9 @@ function DetailFields(props: DetailFieldsProps): any {
 		const targetField = props.movie[capitalizedField];
 		const shouldBeInserted = targetField && targetField !== 'N/A';
 		if (shouldBeInserted) {
-			elements.push(<li>{t(capitalizedField)}: {targetField}</li>);
+			elements.push(
+				<li>{t('detail.' + capitalizedField)}: {targetField}</li>
+			);
 		}
 	})
 	return elements;

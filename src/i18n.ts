@@ -8,6 +8,7 @@ i18n
 	.init({
 		resources,
 		lng: "fr",
+		fallbackLng: 'en',
 		interpolation: {
 			escapeValue: false
 		}

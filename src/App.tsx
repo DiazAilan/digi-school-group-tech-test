@@ -12,8 +12,8 @@ import ThemeProvider from "@material-ui/styles/ThemeProvider";
 import {digiSchoolTheme} from "./Theme.config";
 
 const MENU_OPTIONS = [
-	{icon: 'home', path: '/', name: 'Home'},
-	{icon: 'search', path: '/search', name: 'Search'},
+	{icon: 'home', path: '/', id: 'home'},
+	{icon: 'search', path: '/search', id: 'search'},
 ];
 
 const useStyles = makeStyles((theme: Theme) =>

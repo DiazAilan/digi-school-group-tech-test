@@ -12,6 +12,7 @@ import {
 	Typography,
 } from "@material-ui/core";
 import MoviesContext from "./MoviesContext";
+import {useTranslation} from "react-i18next";
 
 export interface MovieCardInterface {
 	Title: string;
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			transition: 'all 0.5s',
 			width: 'calc(50% - 16px)',
 			'&.selected': {
-				background: '#a6f1a6'
+				background: '#5ae080'
 			},
 			[theme.breakpoints.down('sm')]: {
 				width: '100%',
@@ -60,6 +61,7 @@ function MovieCard(props: MovieCardProps) {
 	const [hover, setHover] = useState(false);
 	const [selected, setSelected] = useState(false);
 	const context = useContext(MoviesContext);
+	const { t } = useTranslation();
 
 	const evaluateSelection = () =>  {
 		return context.selected.includes(props.movie.imdbID);
@@ -93,7 +95,7 @@ function MovieCard(props: MovieCardProps) {
 			</CardActionArea>
 			<CardActions className={classes.cardAction}>
 				<Button size="small">
-					{selected ? 'Selected' : 'Vote'}
+					{t(selected ? 'home.selected' : 'home.vote')}
 				</Button>
 			</CardActions>
 		</Card>

@@ -1,17 +1,89 @@
 {
 	"fr": {
 		"translation": {
-			"Home": "Accueil",
-			"Search": "Recherche",
+			"common": {
+				"home": "Accueil",
+				"search": "Rechercher"
+			},
+			"home": {
+				"vote": "Voter",
+				"selected": "Sélectionné",
+				"maxMoviesError": "Vous ne pouvez voter que jusqu'à 3 films !"
+			},
+			"search": {
+				"noResults": "Aucun résultat"
+			},
 			"detail": {
-				"Released": "Sortie"
+				"Released": "Sortie",
+				"Rated": "Classification",
+				"Runtime": "Durée",
+				"Genre": "Genre",
+				"Director": "Réalisateur/Réalisatrice",
+				"Writer": "Écrivain",
+				"Actors": "Acteurs",
+				"Language": "Langue",
+				"Country": "Pays",
+				"Awards": "Prix",
+				"Plot": "Synopsis"
 			}
 		}
 	},
 	"es": {
 		"translation": {
-			"Home": "Inicio",
-			"Search": "Búsqueda"
+			"common": {
+				"home": "Inicio",
+				"search": "Búsqueda"
+			},
+			"home": {
+				"vote": "Votar",
+				"selected": "Seleccionada",
+				"maxMoviesError": "¡Solo puedes votar por hasta 3 películas!"
+			},
+			"search": {
+				"noResults": "Sin resultados"
+			},
+			"detail": {
+				"Released": "Lanzamiento",
+				"Rated": "Clasificada",
+				"Runtime": "Duración",
+				"Genre": "Género",
+				"Director": "Director/a",
+				"Writer": "Escritor/a",
+				"Actors": "Actores",
+				"Language": "Idioma",
+				"Country": "País",
+				"Awards": "Premios",
+				"Plot": "Sinopsis"
+			}
+		}
+	},
+	"en": {
+		"translation": {
+			"common": {
+				"home": "Home",
+				"search": "Search"
+			},
+			"home": {
+				"vote": "Vote",
+				"selected": "Selected",
+				"maxMoviesError": "You can only vote up to 3 movies!"
+			},
+			"search": {
+				"noResults": "No results"
+			},
+			"detail": {
+				"Released": "Released",
+				"Rated": "Rated",
+				"Runtime": "Runtime",
+				"Genre": "Genre",
+				"Director": "Director",
+				"Writer": "Writer",
+				"Actors": "Actors",
+				"Language": "Language",
+				"Country": "Country",
+				"Awards": "Awards",
+				"Plot": "Plot"
+			}
 		}
 	}
 }

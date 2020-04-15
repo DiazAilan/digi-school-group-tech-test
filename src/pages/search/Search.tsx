@@ -5,6 +5,7 @@ import { fetchMovies } from "../../services/movies.service";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchContext from "./SearchContext";
 import Results from "./Results";
+import {useTranslation} from "react-i18next";
 
 const DEFAULT_SEARCH = 'Pirate';
 const LOADING_ANIMATION_DELAY = 500;
@@ -32,6 +33,7 @@ function Search() {
 	const [movies, setMovies] = useState([]);
 	const [searchCriteria, setSearchCriteria] = useState(DEFAULT_SEARCH);
 	const [ready, setReady] = useState(false);
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		setReady(false);
@@ -53,26 +55,24 @@ function Search() {
 	return (
 		<Container fixed className={classes.root}>
 			<div>
-				<h2>Search</h2>
+				<h2>{t('common.search')}</h2>
 				<Container fixed>
 					<form className={classes.root} noValidate autoComplete="off">
-						<TextField
-							id="outlined-basic"
-							label="Search"
-							variant="outlined"
-							value={searchCriteria}
+						<TextField id="outlined-basic" variant="outlined"
 							className={classes.searchInput}
-							onChange={handleSearchChange}/>
+		          label={t('common.search')}
+							onChange={handleSearchChange}
+							value={searchCriteria}
+						/>
 					</form>
 					{ready
 						? <SearchContext.Provider value={{movies: movies}}>
-								<Results />
+								<Results/>
 							</SearchContext.Provider>
-						: (
-							<Container className={classes.loadingContainer}>
-								<CircularProgress color="secondary" size={48}></CircularProgress>
+						: <Container className={classes.loadingContainer}>
+								<CircularProgress color="secondary" size={48}/>
 							</Container>
-						)}
+					}
 				</Container>
 			</div>
 		</Container>
