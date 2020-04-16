@@ -50,7 +50,7 @@ function App() {
 		<div className={classes.root}>
 			<CssBaseline />
 			<ThemeProvider theme={digiSchoolTheme}>
-				<BrowserRouter>
+				<BrowserRouter basename="/digi-school-group-test-tech">
 					<NavigationBar onMenuClick={toggleDrawer} open={open}/>
 					<NavigationMenu
 						onCloseMenuClick={closeDrawer}

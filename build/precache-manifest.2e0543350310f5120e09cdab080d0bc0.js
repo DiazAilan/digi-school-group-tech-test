@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bb7a2a9ef70019935e6189a1fad78ed",
+    "revision": "bdbc67a3383571f46f9d65831f12b853",
     "url": "/digi-school-group-tech-test/index.html"
   },
   {
-    "revision": "a3fa557f48c5ddaa1bfb",
+    "revision": "a42d482c6d6fb7e4233e",
     "url": "/digi-school-group-tech-test/static/css/main.789f69dd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digi-school-group-tech-test/static/js/2.9ef39024.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3fa557f48c5ddaa1bfb",
-    "url": "/digi-school-group-tech-test/static/js/main.a736f6ac.chunk.js"
+    "revision": "a42d482c6d6fb7e4233e",
+    "url": "/digi-school-group-tech-test/static/js/main.5e341d2c.chunk.js"
   },
   {
     "revision": "8ed00e080b081cec8182",
