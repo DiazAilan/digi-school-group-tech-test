@@ -14,6 +14,9 @@ This is Technical Test shows fundamentals concepts of front-end development with
 * **Theming**
 * Use of `LocalStorage` from **Web Storage API**
 
+### Demo
+https://diazailan.github.io/digi-school-group-tech-test/
+
 ### Available Scripts
 
 In the project directory, you can run:
@@ -51,6 +54,9 @@ Ce test technique montre les concepts fondamentaux du développement frontal ave
 * **i18n**
 * **Theming**
 * Utilisation de `LocalStorage` à partir de **Web Storage API**
+
+### Demo
+https://diazailan.github.io/digi-school-group-tech-test/
 
 ### Scripts Disponibles
 
