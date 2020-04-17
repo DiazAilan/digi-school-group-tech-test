@@ -65,7 +65,7 @@ La page se rechargera si vous apportez des modifications.
 #### `npm run build`
 
 Ce script génère l'application pour production dans le dossier `build`. <br />
-Ce regroupe correctement React en mode production et optimise la construction pour le meilleur performance.
+Ce regroupe correctement React en mode production et optimise la construction pour la meilleur performance.
 
 La construction est réduite et les noms de fichiers incluent les hachages.
 
