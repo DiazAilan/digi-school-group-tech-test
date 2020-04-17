@@ -1,3 +1,4 @@
 {
-    "clientApiKey": "19460d96"
+    "clientApiKey": "19460d96",
+    "baseUrl": "https://www.omdbapi.com/"
 }

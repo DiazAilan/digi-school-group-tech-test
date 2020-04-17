@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {ReactElement, useEffect, useState} from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
 import { fetchMovieDetail } from "../../services/MoviesService";
 import { useParams } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import {useTranslation} from "react-i18next";
+import {capitalize} from "../../Utils";
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -104,26 +105,24 @@ interface DetailFieldsProps {
 	};
 }
 
-function DetailFields(props: DetailFieldsProps): any {
+function DetailFields(props: DetailFieldsProps): ReactElement {
 	const { t } = useTranslation();
 	const fields = [
 		'released', 'rated', 'runtime', 'genre', 'director',
 		'writer', 'actors', 'language', 'country', 'awards'
 	]
-	let elements = [] as any[];
-	fields.forEach((field: string) => {
-		const capitalizedField = field.charAt(0).toUpperCase() + field.slice(1);
-		const targetField = props.movie[capitalizedField];
-		const shouldBeInserted = targetField && targetField !== 'N/A';
-		if (shouldBeInserted) {
-			elements.push(
-				<li key={field}>
-					{t('detail.' + capitalizedField)}: {targetField}
-				</li>
-			);
-		}
+	const filteredFields = fields.filter(field => {
+		const targetField = props.movie[capitalize(field)];
+		return targetField && targetField !== 'N/A';
+	});
+	const elements = filteredFields.map(field => {
+		return (
+			<li key={field}>
+				{t('detail.' + capitalize(field))}: {props.movie[capitalize(field)]}
+			</li>
+		)
 	})
-	return elements;
+	return <>{elements}</>;
 }
 
 export default Detail;

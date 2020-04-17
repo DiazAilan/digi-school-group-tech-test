@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00306f180c64d733f392ca964b96b16e",
+    "revision": "1c6ba1945fa2f28df774c2fbd5f910c7",
     "url": "/digi-school-group-tech-test/index.html"
   },
   {
-    "revision": "e29f4dbc3009f15e3dd8",
+    "revision": "350c17a34b7057843ac3",
     "url": "/digi-school-group-tech-test/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "39e6f593da341179f9e7",
-    "url": "/digi-school-group-tech-test/static/js/2.b96248fe.chunk.js"
+    "revision": "8d5f8ad92c69ed77841b",
+    "url": "/digi-school-group-tech-test/static/js/2.d9fe213f.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/digi-school-group-tech-test/static/js/2.b96248fe.chunk.js.LICENSE.txt"
+    "url": "/digi-school-group-tech-test/static/js/2.d9fe213f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e29f4dbc3009f15e3dd8",
-    "url": "/digi-school-group-tech-test/static/js/main.8fa3f344.chunk.js"
+    "revision": "350c17a34b7057843ac3",
+    "url": "/digi-school-group-tech-test/static/js/main.bb80b02e.chunk.js"
   },
   {
     "revision": "8ed00e080b081cec8182",

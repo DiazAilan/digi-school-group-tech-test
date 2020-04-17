@@ -1,10 +1,15 @@
-import React, {useContext} from "react";
+import React, {ReactElement, useContext} from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Icon } from "@material-ui/core";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import SearchContext from "./SearchContext";
 import {useTranslation} from "react-i18next";
+
+interface MovieResult {
+	imdbID: string;
+	Title: string;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -43,14 +48,14 @@ const useStyles = makeStyles((theme: Theme) =>
 	}),
 );
 
-function Results(): any {
+function Results(): ReactElement {
 	const classes = useStyles();
 	const context = useContext(SearchContext);
 	const { t } = useTranslation();
 
-	return (
+	return <>{
 		context.movies && context.movies.length
-			? context.movies.map((movie: any) => (
+			? context.movies.map((movie: MovieResult) => (
 				<div className={classes.root} key={movie.imdbID}>
 					<Link to={'/detail/' + movie.imdbID}>
 						<Card className={classes.resultCard}>
@@ -64,7 +69,7 @@ function Results(): any {
 					</Link>
 				</div>))
 			: <Typography>{context.error || t('search.noResults')}</Typography>
-	)
+	}</>
 }
 
 export default Results;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {ReactElement, useEffect, useState} from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Container, TextField } from "@material-ui/core";
 import { fetchMovies } from "../../services/MoviesService";
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
 	}),
 );
 
-function Search() {
+function Search(): ReactElement {
 	const classes = useStyles();
 	const [movies, setMovies] = useState([]);
 	const [searchInput, setSearchInput] = useState(DEFAULT_SEARCH);
@@ -73,7 +73,7 @@ function Search() {
 		setSearchInput(event.target.value);
 	};
 
-	return (
+	return <>{
 		<Container fixed className={classes.root}>
 			<div>
 				<h2>{t('common.search')}</h2>
@@ -98,7 +98,7 @@ function Search() {
 				</Container>
 			</div>
 		</Container>
-	)
+	}</>
 }
 
 export default Search;
