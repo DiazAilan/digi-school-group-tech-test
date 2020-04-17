@@ -8,7 +8,8 @@
 			"home": {
 				"vote": "Voter",
 				"selected": "Sélectionné",
-				"maxMoviesError": "Vous ne pouvez voter que jusqu'à 3 films !"
+				"maxMoviesError": "Vous ne pouvez voter que jusqu'à 3 films !",
+				"info": "Info"
 			},
 			"search": {
 				"noResults": "Aucun résultat",
@@ -38,7 +39,8 @@
 			"home": {
 				"vote": "Votar",
 				"selected": "Seleccionada",
-				"maxMoviesError": "¡Solo puedes votar por hasta 3 películas!"
+				"maxMoviesError": "¡Solo puedes votar por hasta 3 películas!",
+				"info": "Info"
 			},
 			"search": {
 				"noResults": "Sin resultados",
@@ -68,7 +70,8 @@
 			"home": {
 				"vote": "Vote",
 				"selected": "Selected",
-				"maxMoviesError": "You can only vote up to 3 movies!"
+				"maxMoviesError": "You can only vote up to 3 movies!",
+				"info": "Info"
 			},
 			"search": {
 				"noResults": "No results",
