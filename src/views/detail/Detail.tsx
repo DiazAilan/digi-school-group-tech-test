@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Detail() {
 	const classes = useStyles();
-	const [movie, setMovie] = useState({} as any);
+	const [movie, setMovie] = useState();
 	const [ready, setReady] = useState(false);
 	const routeParams = useParams() as {movieId: string};
 	const movieId = routeParams.movieId;
@@ -64,7 +64,7 @@ function Detail() {
 	}, [movieId])
 
 	useEffect(() => {
-		if (movie.Poster) {
+		if (movie?.Poster) {
 			setTimeout(() => setReady(true), 500);
 		}
 	}, [movie])

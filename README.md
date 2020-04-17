@@ -1,8 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## DigiSchool Group Technical Test (**_BlablaMovie_**)
 
 ![Preview](https://i.imgur.com/5g12QFp.png)
+
+#### [English](https://github.com/DiazAilan/digi-school-group-tech-test#introduction) | [Français](https://github.com/DiazAilan/digi-school-group-tech-test#fran%C3%A7ais) | [Demo](https://diazailan.github.io/digi-school-group-tech-test/)
 
 ### Introduction
 

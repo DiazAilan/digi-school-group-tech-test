@@ -3,13 +3,8 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Icon } from "@material-ui/core";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import SearchContext from "./SearchContext";
+import SearchContext, {MovieResult} from "./SearchContext";
 import {useTranslation} from "react-i18next";
-
-interface MovieResult {
-	imdbID: string;
-	Title: string;
-}
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -49,27 +44,34 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 function Results(): ReactElement {
-	const classes = useStyles();
 	const context = useContext(SearchContext);
 	const { t } = useTranslation();
 
 	return <>{
-		context.movies && context.movies.length
+		context.movies?.length
 			? context.movies.map((movie: MovieResult) => (
-				<div className={classes.root} key={movie.imdbID}>
-					<Link to={'/detail/' + movie.imdbID}>
-						<Card className={classes.resultCard}>
-							<CardContent className={classes.resultCardContent}>
-								<Typography variant="h5" component="h2">
-									{movie.Title}
-								</Typography>
-								<Icon>visibility</Icon>
-							</CardContent>
-						</Card>
-					</Link>
-				</div>))
+				<Result movie={movie} key={movie.imdbID}/>
+			))
 			: <Typography>{context.error || t('search.noResults')}</Typography>
 	}</>
+}
+
+function Result(props: {movie: MovieResult}): ReactElement {
+	const classes = useStyles();
+	return (
+		<div className={classes.root}>
+			<Link to={'/detail/' + props.movie.imdbID}>
+				<Card className={classes.resultCard}>
+					<CardContent className={classes.resultCardContent}>
+						<Typography variant="h5" component="h2">
+							{props.movie.Title}
+						</Typography>
+						<Icon>visibility</Icon>
+					</CardContent>
+				</Card>
+			</Link>
+		</div>
+	)
 }
 
 export default Results;
