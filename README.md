@@ -44,7 +44,7 @@ It also sets commit for pushing changes to **github-pages** so it could be updat
 
 ### Introduction
 
-Ce test technique montre les concepts fondamentaux du développement frontal avec React. Certains sujets abordés dans cette POC (**Proof of Concept**) sont:
+Ce test technique montre les concepts fondamentaux du développement frontal avec React. Certains sujets abordés dans cette **POC** (Proof of Concept) sont:
 * **Typescript** avec `interface` & **Type Guards**
 * **React** avec **Functional Components** & **Hooks** (`useState`, `useEffect` & `useContext`)
 * **Routing**
