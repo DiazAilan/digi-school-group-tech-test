@@ -23,8 +23,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The page will reload if you make edits.
 
 #### `npm run build`
 
@@ -37,4 +36,41 @@ The build is minified and the filenames include the hashes.<br />
 
 Builds the app for production to the `build` folder.<br />
 
-It also sets commit for pushing changes to github-pages so it could be updated to its current production environment.
+It also sets commit for pushing changes to **github-pages** so it could be updated to its current production environment.
+
+---
+
+## Français
+
+### Introduction
+
+Ce test technique montre les concepts fondamentaux du développement frontal avec React. Certains sujets abordés dans cette POC (**Proof of Concept**) sont:
+* **Typescript** avec `interface` & **Type Guards**
+* **React** avec **Functional Components** & **Hooks** (`useState`, `useEffect` & `useContext`)
+* **Routing**
+* **i18n**
+* **Theming**
+* Utilisation de `LocalStorage` à partir de **Web Storage API**
+
+### Scripts Disponibles
+
+Dans le répertoire du projet, vous pouvez exécuter:
+
+#### `npm start`
+
+Exécute l'application en mode développement. <br />
+Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans le navigateur.
+La page se rechargera si vous apportez des modifications.
+
+#### `npm run build`
+
+Génère l'application pour production dans le dossier `build`. <br />
+Il regroupe correctement React en mode production et optimise la construction pour le meilleur performance.
+
+La construction est réduite et les noms de fichiers incluent les hachages.
+
+#### `npm run deploy`
+
+Génère l'application pour production dans le dossier `build`. <br />
+
+Il définit également commit pour pousser les modifications aux **github-pages** afin que ce puisse être mis à jour dans son environnement de production actuel.
