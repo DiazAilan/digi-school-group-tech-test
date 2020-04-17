@@ -67,7 +67,7 @@ function Search() {
 			setMovies([]);
 			setReady(true);
 		}
-	}, [searchInput])
+	}, [searchInput, t])
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchInput(event.target.value);

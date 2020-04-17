@@ -29,10 +29,22 @@ const useStyles = makeStyles((theme: Theme) =>
 	}),
 );
 
+const assignSelectedMoviesFromLocalStorage = (): string[] => {
+	const movieSelection = localStorage.getItem('blablaMovieVotes');
+	return movieSelection ? JSON.parse(movieSelection) : []
+}
+
+const setSelectedMoviesInLocalStorage = (selection: string[]) => {
+	localStorage.setItem('blablaMovieVotes', JSON.stringify(selection))
+}
+
 function Home() {
 	const classes = useStyles();
 	const [movies, setMovies] = useState([]);
-	const [selectedMovies, setSelectedMovies] = useState([] as string[]);
+	const [
+		selectedMovies,
+		setSelectedMovies
+	] = useState(assignSelectedMoviesFromLocalStorage());
 	const [ready, setReady] = useState(false);
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState('');
@@ -50,6 +62,7 @@ function Home() {
 			setErrorMessage(t('home.maxMoviesError'))
 		}
 		setSelectedMovies(outputSelectedMovies);
+		setSelectedMoviesInLocalStorage(outputSelectedMovies);
 	}
 
 	const handleErrorClose = (

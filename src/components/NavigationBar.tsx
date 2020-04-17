@@ -3,6 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 import MenuIcon from "@material-ui/icons/Menu";
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import {Link} from "react-router-dom";
 
 const DRAWER_WIDTH = 180;
 
@@ -17,6 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
+      '& a': {
+        textDecoration: 'none',
+        color: '#fafafa'
+      }
     },
     appBarShift: {
       marginLeft: DRAWER_WIDTH,
@@ -70,7 +75,7 @@ function NavigationBar(props: NavigationBarProps) {
             <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-                BlablaMovie
+                <Link to="/">BlablaMovie</Link>
             </Typography>
             </Toolbar>
         </AppBar>

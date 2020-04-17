@@ -40,5 +40,10 @@ export const digiSchoolGroupTheme = createMuiTheme({
 	palette: {
 		primary: digiSchoolGroupPrimaryColor,
 		secondary: digiSchoolGroupAccentColor,
+	},
+	props: {
+		MuiButtonBase: {
+			disableRipple: true,
+		},
 	}
 });

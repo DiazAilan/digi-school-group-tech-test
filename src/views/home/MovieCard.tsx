@@ -83,13 +83,10 @@ function MovieCard(props: MovieCardProps) {
 	const context = useContext(MoviesContext);
 	const { t } = useTranslation();
 
-	const evaluateSelection = () =>  {
-		return context.selected.includes(props.movie.imdbID);
-	}
-
 	useEffect(() => {
-		setSelected(evaluateSelection());
-	}, [context.selected])
+		const isSelectedInContext = context.selected.includes(props.movie.imdbID);
+		setSelected(isSelectedInContext);
+	}, [context.selected, props.movie.imdbID])
 
 	return (
 		<Card

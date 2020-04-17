@@ -52,15 +52,15 @@ function Detail() {
 	useEffect(() => {
 		setReady(false);
 		fetchMovieDetail(movieId)
-		.then(res => {
-			setMovie(res);
-			setTimeout(() => setReady(true), 500);
-		})
-		.catch(() => {
-			setMovie({});
-			setTimeout(() => setReady(true), 500);
-		});
-	}, [])
+			.then(res => {
+				setMovie(res);
+				setTimeout(() => setReady(true), 500);
+			})
+			.catch(() => {
+				setMovie({});
+				setTimeout(() => setReady(true), 500);
+			});
+	}, [movieId])
 
 	useEffect(() => {
 		if (movie.Poster) {
@@ -76,7 +76,7 @@ function Detail() {
 						<h2>{movie.Title}</h2>
 						<div className={classes.contentWrapper}>
 							<Container className={classes.posterContainer}>
-								<img src={movie.Poster}></img>
+								<img alt={movie.Title} src={movie.Poster}></img>
 							</Container>
 							<Container className={classes.infoContainer}>
 								<ul>
@@ -117,7 +117,9 @@ function DetailFields(props: DetailFieldsProps): any {
 		const shouldBeInserted = targetField && targetField !== 'N/A';
 		if (shouldBeInserted) {
 			elements.push(
-				<li>{t('detail.' + capitalizedField)}: {targetField}</li>
+				<li key={field}>
+					{t('detail.' + capitalizedField)}: {targetField}
+				</li>
 			);
 		}
 	})

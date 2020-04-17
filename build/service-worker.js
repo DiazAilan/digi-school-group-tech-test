@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digi-school-group-tech-test/precache-manifest.2ae18c6ebfa4b5a815ceea9ee50f865d.js"
+  "/digi-school-group-tech-test/precache-manifest.115cc04b23988fbbe1a96f90725b62c0.js"
 );
 
 self.addEventListener('message', (event) => {
