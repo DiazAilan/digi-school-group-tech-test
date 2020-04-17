@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Container } from "@material-ui/core";
-import { fetchMovieDetail } from "../../services/movies.service";
+import { fetchMovieDetail } from "../../services/MoviesService";
 import { useParams } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import {useTranslation} from "react-i18next";

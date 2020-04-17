@@ -1,7 +1,6 @@
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
-import purple from "@material-ui/core/colors/purple";
 
-export const digiSchoolPrimaryColor = {
+export const digiSchoolGroupPrimaryColor = {
 	50: '#e6f0f5',
 	100: '#c0d9e6',
 	200: '#97c0d5',
@@ -19,8 +18,7 @@ export const digiSchoolPrimaryColor = {
 	'contrastDefaultColor': 'light',
 };
 
-/* For use in material-ui/src/styles/colors.js */
-export const digiSchoolAccentColor = {
+export const digiSchoolGroupAccentColor = {
 	50: '#f6e8f2',
 	100: '#e7c6de',
 	200: '#d8a0c8',
@@ -38,9 +36,9 @@ export const digiSchoolAccentColor = {
 	'contrastDefaultColor': 'light',
 };
 
-export const digiSchoolTheme = createMuiTheme({
+export const digiSchoolGroupTheme = createMuiTheme({
 	palette: {
-		primary: digiSchoolPrimaryColor,
-		secondary: digiSchoolAccentColor,
+		primary: digiSchoolGroupPrimaryColor,
+		secondary: digiSchoolGroupAccentColor,
 	}
 });

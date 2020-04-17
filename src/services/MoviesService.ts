@@ -12,7 +12,7 @@ const MOVIE_DB_DETAIL = '&i='
 export function fetchMovies(searchCriteria: string) {
 	const url = MOVIE_DB_PATH + MOVIE_DB_SEARCH + searchCriteria;
 	return get(url)
-		.then((response: any) => response.data.Search)
+		.then((response: any) => response.data)
 		.catch((err: Error) => err);
 }
 

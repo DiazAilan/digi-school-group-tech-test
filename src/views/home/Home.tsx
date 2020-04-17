@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Container, Snackbar, IconButton, Icon } from "@material-ui/core";
-import { fetchMovies } from "../../services/movies.service";
+import { fetchMovies } from "../../services/MoviesService";
 import MovieCard, { MovieCardInterface } from "./MovieCard";
 import MoviesContext from "./MoviesContext";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -10,6 +10,7 @@ import {useTranslation} from "react-i18next";
 const LOADING_ANIMATION_DELAY = 500;
 const MAX_MOVIES_VOTES = 3;
 const ERROR_MESSAGE_DURATION = 6000;
+const DEFAULT_SEARCH = 'elm-street'
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -63,16 +64,16 @@ function Home() {
 
 	useEffect(() => {
 		setReady(false);
-		fetchMovies('elm-street')
-		.then(res => {
-			setMovies(res);
-			setTimeout(() => setReady(true), LOADING_ANIMATION_DELAY);
-		})
-		.catch((error: Error) => {
-			setError(true);
-			setErrorMessage(error.message);
-			setTimeout(() => setReady(true), LOADING_ANIMATION_DELAY);
-		});
+		fetchMovies(DEFAULT_SEARCH)
+			.then(res => {
+				setMovies(res.Search);
+				setTimeout(() => setReady(true), LOADING_ANIMATION_DELAY);
+			})
+			.catch((error: Error) => {
+				setError(true);
+				setErrorMessage(error.message);
+				setTimeout(() => setReady(true), LOADING_ANIMATION_DELAY);
+			});
 	}, [])
 
 	return (
@@ -86,7 +87,7 @@ function Home() {
 					{ready
 						? movies.map((movie: MovieCardInterface) => (
 							<MovieCard key={movie.imdbID} movie={movie}
-								onCardClick={() => toggleMovieSelection(movie.imdbID)}
+								onVoteClick={() => toggleMovieSelection(movie.imdbID)}
 							/>
 						))
 						: <Container className={classes.loadingContainer}>

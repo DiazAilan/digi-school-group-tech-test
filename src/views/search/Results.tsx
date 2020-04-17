@@ -63,7 +63,7 @@ function Results(): any {
 						</Card>
 					</Link>
 				</div>))
-			: <Typography>{t('search.noResults')}</Typography>
+			: <Typography>{context.error || t('search.noResults')}</Typography>
 	)
 }
 

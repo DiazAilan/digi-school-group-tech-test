@@ -11,7 +11,8 @@
 				"maxMoviesError": "Vous ne pouvez voter que jusqu'à 3 films !"
 			},
 			"search": {
-				"noResults": "Aucun résultat"
+				"noResults": "Aucun résultat",
+				"noSearch": "Utiliser l'entrée de recherche pour commencer"
 			},
 			"detail": {
 				"Released": "Sortie",
@@ -40,7 +41,8 @@
 				"maxMoviesError": "¡Solo puedes votar por hasta 3 películas!"
 			},
 			"search": {
-				"noResults": "Sin resultados"
+				"noResults": "Sin resultados",
+				"noSearch": "Usa la caja de búsqueda para comenzar"
 			},
 			"detail": {
 				"Released": "Lanzamiento",
@@ -69,7 +71,8 @@
 				"maxMoviesError": "You can only vote up to 3 movies!"
 			},
 			"search": {
-				"noResults": "No results"
+				"noResults": "No results",
+				"noSearch": "Use the search input to start"
 			},
 			"detail": {
 				"Released": "Released",

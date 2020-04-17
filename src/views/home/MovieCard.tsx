@@ -24,7 +24,7 @@ export interface MovieCardInterface {
 interface MovieCardProps {
 	key: string,
 	movie: MovieCardInterface,
-	onCardClick: Function,
+	onVoteClick: Function,
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -33,25 +33,28 @@ const useStyles = makeStyles((theme: Theme) =>
 			cursor: 'pointer',
 			display: 'inline-block',
 			margin: '0 8px 16px',
-			maxWidth: 300,
+			width: '100%',
 			textAlign: 'left',
 			transition: 'all 0.5s',
-			width: 'calc(50% - 16px)',
+			maxWidth: 240,
 			'&.selected': {
-				background: '#5ae080'
+				background: '#5ae080',
 			},
-			[theme.breakpoints.down('sm')]: {
-				width: '100%',
+			[theme.breakpoints.up('sm')]: {
+				maxWidth: 240,
+				width: 'calc(50% - 16px)',
 			},
 		},
 		media: {
 			height: 280,
+			backgroundSize: 'contain',
+			backgroundColor: '#fff'
 		},
 		cardContent: {
 			height: 120,
 		},
 		cardAction: {
-			justifyContent: 'center',
+			justifyContent: 'space-around',
 		}
 	}),
 );
@@ -73,11 +76,10 @@ function MovieCard(props: MovieCardProps) {
 
 	return (
 		<Card
-			className={selected ? classes.card + ' selected' : classes.card}
+			className={classes.card}
 			onMouseEnter={() => setHover(true)}
 			onMouseLeave={() => setHover(false)}
-			raised={hover || selected}
-			onClick={() => props.onCardClick(props.movie.imdbID)}>
+			raised={hover || selected}>
 			<CardActionArea>
 				<CardMedia
 					className={classes.media}
@@ -89,11 +91,15 @@ function MovieCard(props: MovieCardProps) {
 						{props.movie.Title}
 					</Typography>
 					<Typography color="textSecondary" component="p">
-						{props.movie.Year}
+						{props.movie.Year} - {selected ? 'yeah' : 'nah'}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
 			<CardActions className={classes.cardAction}>
+				<Button size="small" className={selected ? 'selected' : ''}
+	        onClick={() => props.onVoteClick(props.movie.imdbID)}>
+					{t(selected ? 'home.selected' : 'home.vote')}
+				</Button>
 				<Button size="small">
 					{t(selected ? 'home.selected' : 'home.vote')}
 				</Button>

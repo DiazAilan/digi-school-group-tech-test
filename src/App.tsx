@@ -5,11 +5,11 @@ import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavigationBar from './components/NavigationBar';
 import NavigationMenu from './components/NavigationMenu';
-import Home from './pages/home/Home';
-import Search from './pages/search/Search';
-import Detail from './pages/detail/Detail';
+import Home from './views/home/Home';
+import Search from './views/search/Search';
+import Detail from './views/detail/Detail';
 import ThemeProvider from "@material-ui/styles/ThemeProvider";
-import {digiSchoolTheme} from "./Theme.config";
+import {digiSchoolGroupTheme} from "./Theme.config";
 
 const MENU_OPTIONS = [
 	{icon: 'home', path: '/', id: 'home'},
@@ -49,7 +49,7 @@ function App() {
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
-			<ThemeProvider theme={digiSchoolTheme}>
+			<ThemeProvider theme={digiSchoolGroupTheme}>
 				<BrowserRouter basename="/digi-school-group-test-tech">
 					<NavigationBar onMenuClick={toggleDrawer} open={open}/>
 					<NavigationMenu
