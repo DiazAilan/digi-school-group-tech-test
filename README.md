@@ -58,19 +58,19 @@ Dans le répertoire du projet, vous pouvez exécuter:
 
 #### `npm start`
 
-Exécute l'application en mode développement. <br />
+Ce script exécute l'application en mode développement. <br />
 Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans le navigateur.
 La page se rechargera si vous apportez des modifications.
 
 #### `npm run build`
 
-Génère l'application pour production dans le dossier `build`. <br />
-Il regroupe correctement React en mode production et optimise la construction pour le meilleur performance.
+Ce script génère l'application pour production dans le dossier `build`. <br />
+Ce regroupe correctement React en mode production et optimise la construction pour le meilleur performance.
 
 La construction est réduite et les noms de fichiers incluent les hachages.
 
 #### `npm run deploy`
 
-Génère l'application pour production dans le dossier `build`. <br />
+Ce script génère l'application pour production dans le dossier `build`. <br />
 
-Il définit également commit pour pousser les modifications aux **github-pages** afin que ce puisse être mis à jour dans son environnement de production actuel.
+Ce définit également un commit pour pousser les modifications sur **github-pages** afin que ce puisse être mis à jour dans son environnement de production actuel.
