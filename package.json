@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:3000",
-  "name": "digi-school-group-test-tech",
+  "name": "digi-school-group-tech-test",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://diazailan.github.io/digi-school-group-tech-test",

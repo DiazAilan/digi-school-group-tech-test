@@ -47,13 +47,13 @@ It also sets commit for pushing changes to **github-pages** so it could be updat
 
 ### Introduction
 
-Ce test technique montre les concepts fondamentaux du développement frontal avec React. Certains sujets abordés dans cette **POC** (Proof of Concept) sont:
-* **Typescript** avec `interface` & **Type Guards**
-* **React** avec **Functional Components** & **Hooks** (`useState`, `useEffect` & `useContext`)
+Ce test technique montre les concepts fondamentaux du développement front-end avec React. Certains sujets abordés dans cette **POC** (Proof of Concept) sont:
+* **Typescript** avec de la `interface` et des **Type Guards**
+* **React** avec des **Composants Fonctionnels** et des **Hooks** (`useState`, `useEffect` & `useContext`)
 * **Routing**
 * **i18n**
 * **Theming**
-* Utilisation de `LocalStorage` à partir de **Web Storage API**
+* Utilisation de ¡ `LocalStorage` sur **Web Storage API**
 
 ### Demo
 https://diazailan.github.io/digi-school-group-tech-test/
@@ -65,18 +65,18 @@ Dans le répertoire du projet, vous pouvez exécuter:
 #### `npm start`
 
 Ce script exécute l'application en mode développement. <br />
-Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans le navigateur.
+Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher sur le navigateur.
 La page se rechargera si vous apportez des modifications.
 
 #### `npm run build`
 
-Ce script génère l'application pour production dans le dossier `build`. <br />
+Ce script génère l'application pour production sur le dossier `build`. <br />
 Ce regroupe correctement React en mode production et optimise la construction pour la meilleur performance.
 
 La construction est réduite et les noms de fichiers incluent les hachages.
 
 #### `npm run deploy`
 
-Ce script génère l'application pour production dans le dossier `build`. <br />
+Ce script génère l'application pour production sur le dossier `build`. <br />
 
-Ce définit également un commit pour pousser les modifications sur **github-pages** afin que ce puisse être mis à jour dans son environnement de production actuel.
+Ce définit également un commit pour pousser les modifications sur **github-pages** pour être mis à jour sur son environnement de production actuel.
