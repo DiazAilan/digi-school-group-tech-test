@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/digi-school-group-tech-test/static/css/main.5f361e03.chunk.css",
-    "main.js": "/digi-school-group-tech-test/static/js/main.f65aca21.chunk.js",
-    "main.js.map": "/digi-school-group-tech-test/static/js/main.f65aca21.chunk.js.map",
-    "runtime-main.js": "/digi-school-group-tech-test/static/js/runtime-main.d1ac188a.js",
-    "runtime-main.js.map": "/digi-school-group-tech-test/static/js/runtime-main.d1ac188a.js.map",
-    "static/js/2.d9fe213f.chunk.js": "/digi-school-group-tech-test/static/js/2.d9fe213f.chunk.js",
-    "static/js/2.d9fe213f.chunk.js.map": "/digi-school-group-tech-test/static/js/2.d9fe213f.chunk.js.map",
+    "main.js": "/digi-school-group-tech-test/static/js/main.b761a76a.chunk.js",
+    "main.js.map": "/digi-school-group-tech-test/static/js/main.b761a76a.chunk.js.map",
+    "runtime-main.js": "/digi-school-group-tech-test/static/js/runtime-main.dbacda0f.js",
+    "runtime-main.js.map": "/digi-school-group-tech-test/static/js/runtime-main.dbacda0f.js.map",
+    "static/js/2.42dddf13.chunk.js": "/digi-school-group-tech-test/static/js/2.42dddf13.chunk.js",
+    "static/js/2.42dddf13.chunk.js.map": "/digi-school-group-tech-test/static/js/2.42dddf13.chunk.js.map",
     "index.html": "/digi-school-group-tech-test/index.html",
-    "precache-manifest.ba7f5d16d799be0ef63b6f9d1de928d7.js": "/digi-school-group-tech-test/precache-manifest.ba7f5d16d799be0ef63b6f9d1de928d7.js",
+    "precache-manifest.9a08c4c8d6ec51e8d9605595f96a0e19.js": "/digi-school-group-tech-test/precache-manifest.9a08c4c8d6ec51e8d9605595f96a0e19.js",
     "service-worker.js": "/digi-school-group-tech-test/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/digi-school-group-tech-test/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.d9fe213f.chunk.js.LICENSE.txt": "/digi-school-group-tech-test/static/js/2.d9fe213f.chunk.js.LICENSE.txt"
+    "static/js/2.42dddf13.chunk.js.LICENSE.txt": "/digi-school-group-tech-test/static/js/2.42dddf13.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d1ac188a.js",
-    "static/js/2.d9fe213f.chunk.js",
+    "static/js/runtime-main.dbacda0f.js",
+    "static/js/2.42dddf13.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f65aca21.chunk.js"
+    "static/js/main.b761a76a.chunk.js"
   ]
 }
