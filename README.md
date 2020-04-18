@@ -53,7 +53,7 @@ Ce test technique montre les concepts fondamentaux du développement front-end a
 * **Routing**
 * **i18n**
 * **Theming**
-* Utilisation de ¡ `LocalStorage` sur **Web Storage API**
+* Utilisation de `LocalStorage` sur **Web Storage API**
 
 ### Demo
 https://diazailan.github.io/digi-school-group-tech-test/
